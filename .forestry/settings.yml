@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: ''
+  label: manage directory
+  create: all
+  match: "**/*"
 - type: document
   path: posts
   label: Modify Document
