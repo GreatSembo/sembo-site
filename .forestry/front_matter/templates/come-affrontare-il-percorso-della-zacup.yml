@@ -16,3 +16,19 @@ fields:
     schema:
       format: markdown
   label: Description
+- name: another_text_area
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Another text area
+- name: upload_image
+  type: file
+  config:
+    maxSize: 250
+  label: upload image
+pages:
+- content/posts/2019-09-11/zacUpRecensione.md

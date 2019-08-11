@@ -16,7 +16,7 @@ sections:
   label: manage directory
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: document
   path: content/posts
   label: Modify Document
@@ -27,8 +27,8 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: public
-  install_dependencies_command: npm install
-  preview_docker_image: node:10
+  install_dependencies_command: npm install cwebp-bin && npm install
+  preview_docker_image: node:8.16.0
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: gatsby build
+  instant_preview_command: gatsby develop
