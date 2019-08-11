@@ -12,7 +12,7 @@ sections:
   create: all
   match: "**/*"
 - type: document
-  path: posts
+  path: content/posts
   label: Modify Document
 upload_dir: src/images/jpg
 public_path: src/images/jpg
