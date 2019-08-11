@@ -1,4 +1,9 @@
 ---
 label: Come affrontare il percorso della ZacUp
 hide_body: true
-fields: []
+fields:
+- name: titolo
+  type: text
+  config:
+    required: false
+  label: Titolo
