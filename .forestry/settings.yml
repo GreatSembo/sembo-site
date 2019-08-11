@@ -4,6 +4,10 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/posts
+  label: Create Post
+  match: "**/*"
 - type: heading
   label: SideBar
 - type: directory
