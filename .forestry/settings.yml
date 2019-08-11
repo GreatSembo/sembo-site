@@ -5,10 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: ''
+  path: content
   label: Upload Post
   create: all
-  match: "**/content"
+  match: "**/*"
 - type: heading
   label: SideBar
 - type: directory
