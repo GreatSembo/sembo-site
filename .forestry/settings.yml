@@ -27,7 +27,7 @@ use_front_matter_path: false
 file_template: ":filename:"
 build:
   preview_output_directory: public
-  install_dependencies_command: npm install cwebp-bin && npm install
+  install_dependencies_command: npm install
   preview_docker_image: node:8.16.0
   mount_path: "/srv"
   working_dir: "/srv"
