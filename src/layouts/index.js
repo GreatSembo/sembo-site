@@ -28,7 +28,7 @@ class Layout extends React.Component {
     };
 
     if (typeof window !== `undefined`) {
-      this.loadFont("font400", "'Trebuchet MS'", 400);
+      this.loadFont("font400", "Trebuchet MS", 400);
       this.loadFont("font600", "Trebuchet MS", 600);
     }
   }
