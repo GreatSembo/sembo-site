@@ -1,6 +1,7 @@
 ---
-title: Success
+title: Il Messaggio é stato inviato!
 ---
 
-Thank you. <br />
-I will answer to your message as soon as possible.
+Grazie Mille. <br />
+Ti risponderó il piú presto possibile!
+

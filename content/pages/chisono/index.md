@@ -1,5 +1,6 @@
 ---
-title: About
+title: Chi Sono
+menuTitle: Chi sono
 ---
 
 This is a demo site of the [HeroBlog](https://github.com/greglobinski/gatsby-starter-hero-blog), a [GatsbyJS](https://www.gatsbyjs.org/) starter.

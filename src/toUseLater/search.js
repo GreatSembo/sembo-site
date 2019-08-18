@@ -9,6 +9,7 @@ import { ThemeContext } from "../layouts";
 import Seo from "../components/Seo";
 
 import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo";
+// this file was on pages
 
 const SearchPage = props => {
   const {

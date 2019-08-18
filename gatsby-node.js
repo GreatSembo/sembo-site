@@ -42,6 +42,7 @@ exports.createPages = ({ graphql, actions }) => {
     const postTemplate = path.resolve("./src/templates/PostTemplate.js");
     const pageTemplate = path.resolve("./src/templates/PageTemplate.js");
     const categoryTemplate = path.resolve("./src/templates/CategoryTemplate.js");
+    const categoryPostsTemplate = path.resolve("./src/templates/CategoryPostsTemplate.js");
 
     // Do not create draft post files in production.
     let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
@@ -108,9 +109,18 @@ exports.createPages = ({ graphql, actions }) => {
             }
           });
         });
+        //Create Trail Running Page
+        createPage({
+          path: `/trailrunning/`,
+          component: categoryPostsTemplate,
+          context: {
+            categoryList: process.env.TRAILRUNNING_CATEGORIES.split(',')
+          }
+        });
+
 
         // Create posts
-        const posts = items.filter(item => item.node.fields.source === "posts");
+        const posts = items.filter(item => item.node.fields.source.indexOf("posts")!=-1);
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
           const next = index === 0 ? undefined : posts[index - 1].node;

@@ -13,6 +13,7 @@ import "antd/lib/form/style/index.css";
 import "antd/lib/input/style/index.css";
 import "antd/lib/button/style/index.css";
 import { ThemeContext } from "../../layouts";
+import * as emailjs from 'emailjs-com';
 
 const Contact = props => {
   const { getFieldDecorator } = props.form;
@@ -31,22 +32,38 @@ const Contact = props => {
         sendMessage(values);
       }
     });
+
   }
 
   function sendMessage(values) {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...values })
-    })
-      .then(() => {
-        console.log("Form submission success");
-        navigate("/success");
-      })
-      .catch(error => {
-        console.error("Form submission error:", error);
-        this.handleNetworkError();
-      });
+    // fetch("/", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //   body: encode({ "form-name": "contact", ...values })
+    // })
+    //   .then(() => {
+    //     console.log("Form submission success");
+    //     navigate("/success");
+    //   })
+    //   .catch(error => {
+    //     console.error("Form submission error:", error);
+    //     this.handleNetworkError();
+    //   });
+      var templateParams = {
+        name: values.name,
+        message: values.message,
+        email:values.email
+    };
+    
+    console.log(values)
+    emailjs.send('gmail',process.env.EMAILJS_TEMPLATE, templateParams,process.env.EMAILJS_USERID)
+        .then(function(response) {                                                
+          console.log('SUCCESS!', response.status, response.text);
+          navigate("/success");
+        }, function(err) {
+          console.log('FAILED...', err);
+          this.handleNetworkError();
+        });
   }
 
   function handleNetworkError(e) {
@@ -78,7 +95,7 @@ const Contact = props => {
                   rules: [
                     {
                       required: true,
-                      message: "Please input your e-mail address!",
+                      message: "Inserisci il tuo indirizzo email",
                       whitespace: true,
                       type: "email"
                     }
@@ -88,7 +105,7 @@ const Contact = props => {
               <FormItem label="Message">
                 {getFieldDecorator("message", {
                   rules: [
-                    { required: true, message: "Please input your message!", whitespace: true }
+                    { required: true, message: "Inserisci il tuo messaggio", whitespace: true }
                   ]
                 })(
                   <TextArea name="message" placeholder="" autosize={{ minRows: 4, maxRows: 10 }} />

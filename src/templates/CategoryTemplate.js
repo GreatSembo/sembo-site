@@ -26,23 +26,20 @@ const CategoryTemplate = props => {
           <Article theme={theme}>
             <header>
               <Headline theme={theme}>
-                <span>Posts in category</span> <FaTag />
+                <span>Post per Categoria</span> <FaTag />
                 {category}
               </Headline>
               <p className="meta">
-                There {totalCount > 1 ? "are" : "is"} <strong>{totalCount}</strong> post{totalCount >
-                1
-                  ? "s"
-                  : ""}{" "}
-                in the category.
+                 {totalCount > 1 ? "Ci sono" : "C'é "} <strong>{totalCount}</strong> post
+                nella categoria.
               </p>
               <List edges={edges} theme={theme} />
             </header>
           </Article>
         )}
       </ThemeContext.Consumer>
-
-      <Seo facebook={facebook} />
+{/* 
+      <Seo facebook={facebook} /> */}
     </React.Fragment>
   );
 };

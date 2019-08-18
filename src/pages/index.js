@@ -52,7 +52,7 @@ class IndexPage extends React.Component {
           {theme => <Blog posts={posts} theme={theme} />}
         </ThemeContext.Consumer>
 
-        <Seo facebook={facebook} />
+        {/* <Seo facebook={facebook} /> */}
 
         <style jsx>{`
           hr {
@@ -75,7 +75,7 @@ export default IndexPage;
 export const query = graphql`
   query IndexQuery {
     posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*/" } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {

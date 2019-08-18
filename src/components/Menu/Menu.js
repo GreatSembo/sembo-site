@@ -3,9 +3,13 @@ import PropTypes from "prop-types";
 require("core-js/fn/array/from");
 
 import { FaHome } from "react-icons/fa/";
-import { FaSearch } from "react-icons/fa/";
+import { FaMapSigns } from "react-icons/fa/";
 import { FaEnvelope } from "react-icons/fa/";
 import { FaTag } from "react-icons/fa/";
+import {IoMdTrophy} from "react-icons/io/";
+import {IoIosRibbon} from "react-icons/io/";
+import {MdDirectionsRun} from "react-icons/md/";
+import {MdLocalPizza} from "react-icons/md/";
 
 import Item from "./Item";
 import Expand from "./Expand";
@@ -23,11 +27,15 @@ class Menu extends React.Component {
     }));
 
     this.items = [
-      { to: "/", label: "Home", icon: FaHome },
-      { to: "/category/", label: "Categories", icon: FaTag },
-      { to: "/search/", label: "Search", icon: FaSearch },
+      { to: "/", label: "Home", icon: MdDirectionsRun },
+      { to: "/trailrunning", label: "Percorsi", icon: FaMapSigns },
+      { to: "/gare", label: "Gare", icon: IoMdTrophy },
+      { to: "/alimentazione", label: "Alimentazione", icon: MdLocalPizza },
+      { to: "/attrezzatura", label: "Attrezzatura", icon: MdLocalPizza },
+      { to: "/category/", label: "Categorie", icon: FaTag },
+      //{ to: "/search/", label: "Search", icon: FaSearch },
       ...pages,
-      { to: "/contact/", label: "Contact", icon: FaEnvelope }
+      { to: "/contact/", label: "Chi Sono", icon: FaEnvelope }
     ];
 
     this.renderedItems = []; // will contain references to rendered DOM elements of menu

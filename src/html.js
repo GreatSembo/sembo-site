@@ -12,6 +12,13 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        {/* code for emailjs service */}
+        {/* <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+        <script type="text/javascript">
+          (function(){
+              emailjs.init("user_YhERRlfK3cBXYpMhyBLbG");
+          })();
+        </script> */}
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

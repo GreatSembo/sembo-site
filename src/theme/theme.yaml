@@ -66,8 +66,8 @@ color:
 font:
   # font options
   family:
-    initial: 'Arial, sans-serif'
-    target: &font-family-target 'Open Sans'
+    initial: '"Trebuchet MS", Helvetica, sans-serif'
+    target: &font-family-target 'Trebuchet MS'
   weight:
     standard: 400
     bold: 600
@@ -145,6 +145,6 @@ blog:
 header:
   height:
     default: 80px
-    fixed: 50px;
+    fixed: 60px;
     homepage: 100px;
 
