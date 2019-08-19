@@ -6,8 +6,21 @@ const Promise = require("bluebird");
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
+  const { frontmatter } = node
+  if (frontmatter) {
+    const { cover } = frontmatter
+    if (cover) {
+      if (cover.indexOf('/../../src/images/postImages') === 0) {
+        frontmatter.cover = path.relative(
+          path.dirname(node.fileAbsolutePath),
+          path.join(__dirname, '/src/images/', cover)
+        )
+      }
+    }
+  }
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode });
     const fileNode = getNode(node.parent);
