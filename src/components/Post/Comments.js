@@ -9,11 +9,11 @@ const Comments = props => {
 
   return (
     <React.Fragment>
-      <div id="post-comments" className="comments">
+      {/* <div id="post-comments" className="comments">
         <FacebookProvider appId={facebook.appId}>
           <FBComments href={`${config.siteUrl}${slug}`} width="100%" colorscheme="light" />
         </FacebookProvider>
-      </div>
+      </div> */}
 
       {/* --- STYLES --- */}
       <style jsx>{`

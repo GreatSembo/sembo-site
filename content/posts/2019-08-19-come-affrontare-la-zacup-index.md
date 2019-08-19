@@ -1,9 +1,10 @@
 ---
 layout: blog
 title: Come affrontare la ZacUp
-category: Trail Running
+category: "Trail Running"
 date: 19-08-2019
-cover: /../../src/images/postImages/_dsc0784.jpg
+cover: ../../src/images/postImages/_dsc0784.jpg
+
 ---
 # h1 Heading 8-)
 

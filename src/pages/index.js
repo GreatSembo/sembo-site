@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { ThemeContext } from "../layouts";
 import Blog from "../components/Blog";
 import Hero from "../components/Hero";
-import Seo from "../components/Seo";
+//import Seo from "../components/Seo";
 
 class IndexPage extends React.Component {
   separator = React.createRef();
@@ -89,6 +89,7 @@ export const query = graphql`
             title
             category
             author
+            date
             cover {
               children {
                 ... on ImageSharp {

@@ -6,7 +6,7 @@ require("core-js/fn/array/find");
 import Article from "../components/Article";
 import Search from "../components/Search";
 import { ThemeContext } from "../layouts";
-import Seo from "../components/Seo";
+//import Seo from "../components/Seo";
 
 import AlgoliaIcon from "!svg-react-loader!../images/svg-icons/search-by-algolia.svg?name=AlgoliaLogo";
 // this file was on pages
@@ -34,7 +34,7 @@ const SearchPage = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo facebook={facebook} />
+      {/* <Seo facebook={facebook} /> */}
 
       {/* --- STYLES --- */}
       <style jsx>{`

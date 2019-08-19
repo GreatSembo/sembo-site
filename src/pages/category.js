@@ -6,7 +6,7 @@ import { ThemeContext } from "../layouts";
 import Article from "../components/Article/";
 import Headline from "../components/Article/Headline";
 import List from "../components/List";
-import Seo from "../components/Seo";
+// import Seo from "../components/Seo";
 
 const CategoryPage = props => {
   const {
@@ -71,7 +71,7 @@ const CategoryPage = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo facebook={facebook} />
+      {/* <Seo facebook={facebook} /> */}
     </React.Fragment>
   );
 };

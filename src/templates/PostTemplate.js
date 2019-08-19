@@ -3,7 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 require("prismjs/themes/prism-okaidia.css");
 
-import Seo from "../components/Seo";
+// import Seo from "../components/Seo";
 import Article from "../components/Article";
 import Post from "../components/Post";
 import { ThemeContext } from "../layouts";
@@ -37,7 +37,7 @@ const PostTemplate = props => {
         )}
       </ThemeContext.Consumer>
 
-      <Seo data={post} facebook={facebook} />
+      {/* <Seo data={post} facebook={facebook} /> */}
     </React.Fragment>
   );
 };
