@@ -1,8 +1,8 @@
 module.exports = {
   siteTitle: "Trail Runner Life - Una passione per raggiungere tutte le vette", // <title>
   shortSiteTitle: "Trail Runner Life", // <title> ending for posts and pages
-  siteDescription: "Un blog dove esprimo le mie opinioni e racconto le mie avventure nel mondo del Trail Running",
-  siteUrl: "https://gatsby-starter-hero-blog.greglobinski.com",
+  siteDescription: "Blog dove esprimo le mie opinioni e racconto le mie avventure nel mondo del Trail Running",
+  siteUrl: "https://trailrunnerlife.it", //TODO Modificare
   // pathPrefix: "",
   siteImage: "preview.jpg",
   siteLanguage: "it",

@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 import Item from "./Item";
+import {  FaInstagram} from "react-icons/fa/";
 
 const Blog = props => {
   const { posts, theme } = props;
@@ -9,6 +10,9 @@ const Blog = props => {
   return (
     <React.Fragment>
       <main className="main">
+        <section className="instagram">
+         <a className="instagram" href="https://instagram.com/running_sembo" target="_blank">Seguimi su Instagram <FaInstagram/></a>
+        </section>
         <ul>
           {posts.map(post => {
             const {
@@ -24,6 +28,13 @@ const Blog = props => {
 
       {/* --- STYLES --- */}
       <style jsx>{`
+        .instagram{
+          font-size:${theme.heading.size.h3};
+          padding-top:30px;
+          font-weight:bold;
+          text-align:center;
+          
+        }
         .main {
           padding: 0 ${theme.space.inset.default};
         }

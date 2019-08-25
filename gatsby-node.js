@@ -131,6 +131,14 @@ exports.createPages = ({ graphql, actions }) => {
             categoryList: process.env.TRAILRUNNING_CATEGORIES.split(',')
           }
         });
+        createPage({
+          path: `/races/`,
+          component: categoryPostsTemplate,
+          context: {
+            categoryList: process.env.RACE_CATEGORIES.split(',')
+          }
+        });
+
 
 
         // Create posts

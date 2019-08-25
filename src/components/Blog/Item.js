@@ -6,6 +6,7 @@ import Img from "gatsby-image";
 import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import mountainArrow from '../../images/png/mountainArrow.png'
 
 const Item = props => {
   const {
@@ -33,7 +34,7 @@ const Item = props => {
             <Img fluid={fluid} />
           </div>
           <h1>
-            {title} <FaArrowRight className="arrow" />
+            {title} <img src={mountainArrow} alt="mountain image" className="arrow"  /> 
           </h1>
           <p className="meta">
             <span>
@@ -62,7 +63,7 @@ const Item = props => {
         li {
           border: 1px solid transparent;
           border-radius: ${theme.size.radius.default};
-          margin: ${`calc(${theme.space.default} * 2) 0 calc(${theme.space.default} * 3)`};
+          margin: ${`calc(${theme.space.default} * 1) 0 calc(${theme.space.default} * 1)`};
           padding: ${theme.space.inset.s};
           position: relative;
           transition: all ${theme.time.duration.default};
@@ -172,7 +173,7 @@ const Item = props => {
         }
         @from-width desktop {
           li {
-            margin: ${`calc(${theme.space.default} * 4) 0 calc(${theme.space.default} * 5)`};
+            margin: ${`calc(${theme.space.default} * 2) 0 calc(${theme.space.default} * 3.2)`};
             padding: 0 0 ${`calc(${theme.space.default} * 2)`};
 
             &::after {
@@ -231,7 +232,8 @@ const Item = props => {
               stroke-linecap: round;
               opacity: 0;
               transition: all 0.5s;
-              transform: translateX(-50%);
+              transform:  rotate(-90deg) translateX(70%) scale(0.7) ;
+           
             }
           }
         }

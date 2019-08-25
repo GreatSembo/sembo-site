@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Img from "gatsby-image";
 import { FaArrowDown } from "react-icons/fa/";
-
+import {FaTree} from 'react-icons/fa/';
+import {TiTree} from 'react-icons/ti/';
+import mountain from '../../images/png/Webp.net-resizeimage.png'
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
 
@@ -10,15 +12,26 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          Hey, Io sono Luca Sembolini e sono un Trail Runner per passione. Questo é il mio blog dove esprimo le mie opinioni su tutto quello che riguarda il mondo del running. 
+          Sono Luca Sembolini e sono un Trail Runner per passione, qui esprimo le mie opinioni su tutto quello che riguarda il mondo del running. 
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
+          {/* <FaTree /> */}
+          <img src={mountain} alt="mountain image" />
         </button>
+        
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
+        .instagram{
+          align-items:left;
+          font-weight:bold;
+          background:${theme.background.color.brand};
+          border-radius:0.5;
+          position:absolute;
+          bottom:0;
+          right:0;
+        }
         .hero {
           align-items: center;
           background: ${theme.hero.background};
@@ -40,7 +53,7 @@ const Hero = props => {
 
         h1 {
           text-align: center;
-          font-size: ${theme.hero.h1.size};
+          font-size: ${`calc(${theme.hero.h1.size} * 0.7)`};
           margin: ${theme.space.stack.l};
           color: ${theme.hero.h1.color};
           line-height: ${theme.hero.h1.lineHeight};
@@ -67,6 +80,7 @@ const Hero = props => {
           background: ${theme.background.color.brand};
           border: 0;
           border-radius: 50%;
+          transform: rotate(180deg);
           font-size: ${theme.font.size.m};
           padding: ${theme.space.s} ${theme.space.m};
           cursor: pointer;
@@ -78,8 +92,9 @@ const Hero = props => {
             background: ${theme.color.brand.primary.active};
           }
 
-          :global(svg) {
+          :global(img) {
             position: relative;
+          
             top: 5px;
             fill: ${theme.color.neutral.white};
             stroke-width: 40;
@@ -112,7 +127,7 @@ const Hero = props => {
 
           h1 {
             max-width: 90%;
-            font-size: ${`calc(${theme.hero.h1.size} * 1.3)`};
+            font-size: ${`calc(${theme.hero.h1.size} * 1.2)`};
           }
 
           button {
@@ -130,7 +145,7 @@ const Hero = props => {
 
           h1 {
             max-width: 80%;
-            font-size: ${`calc(${theme.hero.h1.size} * 1.5)`};
+            font-size: ${`calc(${theme.hero.h1.size} * 1.4)`};
           }
 
           button {

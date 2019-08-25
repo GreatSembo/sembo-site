@@ -119,7 +119,9 @@ class Header extends React.Component {
             overflow: hidden;
             width: 44px;
             transition: all 0.5s;
-
+         
+            background:rgba(255,255,255,0.5);
+              
             .homepage & {
               height: 60px;
               width: 60px;

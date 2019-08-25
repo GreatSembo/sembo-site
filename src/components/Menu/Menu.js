@@ -10,6 +10,7 @@ import {IoMdTrophy} from "react-icons/io/";
 import {IoIosRibbon} from "react-icons/io/";
 import {MdDirectionsRun} from "react-icons/md/";
 import {MdLocalPizza} from "react-icons/md/";
+import { GoGear } from "react-icons/go/";
 
 import Item from "./Item";
 import Expand from "./Expand";
@@ -30,12 +31,13 @@ class Menu extends React.Component {
       { to: "/", label: "Home", icon: MdDirectionsRun },
       { to: "/trailrunning", label: "Percorsi", icon: FaMapSigns },
       { to: "/gare", label: "Gare", icon: IoMdTrophy },
-      { to: "/alimentazione", label: "Alimentazione", icon: MdLocalPizza },
-      { to: "/attrezzatura", label: "Attrezzatura", icon: MdLocalPizza },
+      //TODO add when an article is ready
+      //{ to: "/alimentazione", label: "Alimentazione", icon: MdLocalPizza },
+      { to: "/attrezzatura", label: "Attrezzatura", icon: GoGear },
       { to: "/category/", label: "Categorie", icon: FaTag },
       //{ to: "/search/", label: "Search", icon: FaSearch },
       ...pages,
-      { to: "/contact/", label: "Chi Sono", icon: FaEnvelope }
+      { to: "/contact/", label: "Contattami", icon: FaEnvelope }
     ];
 
     this.renderedItems = []; // will contain references to rendered DOM elements of menu

@@ -11,7 +11,7 @@ space :
   l: 40px
   xl: 80px
   inset:
-    default : 20px
+    default : 15px
     xs: 5px
     s: 10px
     m: 20px
@@ -54,12 +54,12 @@ color:
       k: '#2b2826'
     black: '#000000'
   brand:
-    primary: &color-brand-primary '#709425'
-    primaryActive: '#709425'
-    light: '#709425'
-    lightActive: '#709425'
-    dark: '#709425'
-    darkActive: '#709425'
+    primary: &color-brand-primary '#74a018'
+    primaryActive: '#74a018'
+    light: '#74a018'
+    lightActive: '#74a018'
+    dark: '#74a018'
+    darkActive: '#74a018'
   special:
     attention: &color-special-attention orange
 # FONT
